@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bpebmcsf8e87x"
-path="res://.godot/imported/Snake.glb-9941db10e317c73130ba648d52165460.scn"
+uid="uid://cs8fpe21i8juq"
+path="res://.godot/imported/Sconce.glb-4ea9fce2a1d398981f1dd9db5ba96e97.scn"
 
 [deps]
 
-source_file="res://Snake.glb"
-dest_files=["res://.godot/imported/Snake.glb-9941db10e317c73130ba648d52165460.scn"]
+source_file="res://extra/Sconce.glb"
+dest_files=["res://.godot/imported/Sconce.glb-4ea9fce2a1d398981f1dd9db5ba96e97.scn"]
 
 [params]
 

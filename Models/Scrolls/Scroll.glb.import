@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cs8fpe21i8juq"
-path="res://.godot/imported/Sconce.glb-5185f4340b2c8c864bfb17c07cc0ffcf.scn"
+uid="uid://bb50iqu1ifarc"
+path="res://.godot/imported/Scroll.glb-649d75059f997164f0cfb6da00e31f5e.scn"
 
 [deps]
 
-source_file="res://Sconce.glb"
-dest_files=["res://.godot/imported/Sconce.glb-5185f4340b2c8c864bfb17c07cc0ffcf.scn"]
+source_file="res://Models/Scrolls/Scroll.glb"
+dest_files=["res://.godot/imported/Scroll.glb-649d75059f997164f0cfb6da00e31f5e.scn"]
 
 [params]
 

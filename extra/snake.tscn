@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4xt5gemfwvog"]
 
-[ext_resource type="PackedScene" uid="uid://bpebmcsf8e87x" path="res://Snake.glb" id="1_q7boo"]
+[ext_resource type="PackedScene" uid="uid://bpebmcsf8e87x" path="res://extra/Snake.glb" id="1_q7boo"]
 
 [node name="Snake2" instance=ExtResource("1_q7boo")]
 
