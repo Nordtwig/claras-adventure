@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://30nr6k6g1n0g"]
+
+[ext_resource type="PackedScene" uid="uid://b3fgyve0r4mdk" path="res://assets/models/Floor/Floor_Standard.glb" id="1_es8xc"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="Floor_Standard2" parent="Floor" instance=ExtResource("1_es8xc")]
+
+[node name="Columns" type="Node3D" parent="."]
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Rails" type="Node3D" parent="."]
+
+[node name="SunkWalls" type="Node3D" parent="."]
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="Rocks" type="Node3D" parent="."]
+
+[node name="Sconces" type="Node3D" parent="."]
+
+[node name="Dock" type="Node3D" parent="."]
