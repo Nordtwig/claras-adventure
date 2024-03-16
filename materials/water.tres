@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cj1ppmhqd501f"]
+
+[ext_resource type="Shader" path="res://materials/cave_water.gdshader" id="1_6s44y"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6s44y")

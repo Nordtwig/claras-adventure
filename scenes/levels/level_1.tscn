@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://30nr6k6g1n0g"]
+[gd_scene load_steps=34 format=3 uid="uid://30nr6k6g1n0g"]
 
 [ext_resource type="PackedScene" uid="uid://b3fgyve0r4mdk" path="res://assets/models/Floor/Floor_Standard.glb" id="1_es8xc"]
 [ext_resource type="PackedScene" uid="uid://koopsgapjxvk" path="res://assets/models/Floor/Floor_Standard_Curved_1.glb" id="2_cageh"]
@@ -32,6 +32,11 @@
 [ext_resource type="PackedScene" uid="uid://da5ngihxrqcag" path="res://assets/models/Architecture/Dock_Stairs.glb" id="30_3ufm2"]
 [ext_resource type="PackedScene" uid="uid://kmj5g1vtuulo" path="res://assets/models/Architecture/Dock_Long.glb" id="31_x678q"]
 [ext_resource type="PackedScene" uid="uid://co8jyj6a4cc8l" path="res://assets/models/Boat/BoatWSail.glb" id="32_7wfdj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_psu8p"]
+size = Vector2(20, 20)
+subdivide_width = 20
+subdivide_depth = 20
 
 [node name="Level1" type="Node3D"]
 
@@ -454,3 +459,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00144, -0.88288, 5.22316)
 
 [node name="BoatWSail" parent="Dock" instance=ExtResource("32_7wfdj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.51698, -1, 10.7884)
+
+[node name="Water" type="MeshInstance3D" parent="Dock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.40804, -0.932773, 10.8358)
+mesh = SubResource("PlaneMesh_psu8p")
