@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://binukps7h81b" path="res://assets/models/Pots/Pot2.glb" id="22_emysa"]
 [ext_resource type="PackedScene" uid="uid://ds6i1qr6v30nr" path="res://assets/models/Pots/Pot3.glb" id="23_qh5yg"]
 [ext_resource type="PackedScene" uid="uid://dgq3jaj760g3m" path="res://assets/models/Flags/Flag_Wall2.glb" id="24_a3mxb"]
-[ext_resource type="PackedScene" uid="uid://cup8ukdrogdx3" path="res://assets/models/Bush/Bush_Round.glb" id="24_bskwg"]
+[ext_resource type="PackedScene" uid="uid://botjo6mb75sxg" path="res://props/bush.tscn" id="26_m7307"]
 [ext_resource type="PackedScene" uid="uid://dthksirs4n331" path="res://assets/models/Architecture/Rail_Corner.glb" id="27_7h5ld"]
 [ext_resource type="PackedScene" uid="uid://cib8vvikhpove" path="res://assets/models/Architecture/Rail_Straight.glb" id="28_apck0"]
 [ext_resource type="PackedScene" uid="uid://cmgjr7k1i8g52" path="res://assets/models/Rocks/RocksRight.glb" id="29_ccxls"]
@@ -416,8 +416,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.36219, 0, -0.530457)
 [node name="Pot32" parent="Props" instance=ExtResource("23_qh5yg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96219, 0, -0.0304575)
 
-[node name="Bush_Round2" parent="Props" instance=ExtResource("24_bskwg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1396, 0, -4.22969)
+[node name="Bush" parent="Props" instance=ExtResource("26_m7307")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5186, 0, 1.73604)
+
+[node name="Bush2" parent="Props" instance=ExtResource("26_m7307")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5224, 0, 2.52972)
+
+[node name="Bush3" parent="Props" instance=ExtResource("26_m7307")]
+transform = Transform3D(0.539667, 0, -0.841878, 0, 1, 0, 0.841878, 0, 0.539667, 14.1624, 0, 2.05809)
+
+[node name="Bush4" parent="Props" instance=ExtResource("26_m7307")]
+transform = Transform3D(0.539667, 0, -0.841878, 0, 1, 0, 0.841878, 0, 0.539667, 14.9975, 0.142996, 2.07887)
 
 [node name="Flag_Wall22" parent="Props" instance=ExtResource("24_a3mxb")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.7809, 3, 5)
