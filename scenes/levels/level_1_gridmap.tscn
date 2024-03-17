@@ -45,6 +45,7 @@ subdivide_depth = 20
 
 [node name="FloorGridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
 mesh_library = ExtResource("1_iww6c")
 cell_center_y = false
 data = {
@@ -54,7 +55,6 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Floor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
-visible = false
 
 [node name="Floor_Standard2" parent="Floor" instance=ExtResource("1_l3khm")]
 
