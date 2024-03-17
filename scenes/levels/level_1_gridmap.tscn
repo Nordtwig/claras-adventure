@@ -22,11 +22,11 @@
 [ext_resource type="PackedScene" uid="uid://dsq4uj7ucdp42" path="res://assets/models/Cart/Cart.glb" id="19_d1lvr"]
 [ext_resource type="PackedScene" uid="uid://bgqxvpk2wfln5" path="res://assets/models/Crate/Crate.glb" id="20_tx1en"]
 [ext_resource type="PackedScene" uid="uid://bkuocr6t3uwmb" path="res://assets/models/Pots/Pot1_Broken.glb" id="21_y16x0"]
-[ext_resource type="PackedScene" uid="uid://3oba4dk73j61" path="res://assets/models/Candles/Candles_1.glb" id="22_2qg0e"]
-[ext_resource type="PackedScene" uid="uid://bwfnglb2tha53" path="res://assets/models/Candles/Candles_2.glb" id="23_0reml"]
+[ext_resource type="PackedScene" uid="uid://cdq3a0mhm2if3" path="res://scenes/props/candles/candles_1.tscn" id="23_6ilbo"]
 [ext_resource type="PackedScene" uid="uid://binukps7h81b" path="res://assets/models/Pots/Pot2.glb" id="24_jjgt2"]
+[ext_resource type="PackedScene" uid="uid://cdr01s516wfjw" path="res://scenes/props/candles/candles_2.tscn" id="24_mtonl"]
 [ext_resource type="PackedScene" uid="uid://ds6i1qr6v30nr" path="res://assets/models/Pots/Pot3.glb" id="25_2ec2o"]
-[ext_resource type="PackedScene" uid="uid://botjo6mb75sxg" path="res://props/bush.tscn" id="26_wbuss"]
+[ext_resource type="PackedScene" uid="uid://botjo6mb75sxg" path="res://scenes/props/bush.tscn" id="26_wbuss"]
 [ext_resource type="PackedScene" uid="uid://dgq3jaj760g3m" path="res://assets/models/Flags/Flag_Wall2.glb" id="27_1d4s7"]
 [ext_resource type="PackedScene" uid="uid://bfk8nju8m4vdt" path="res://assets/models/Rocks/RocksLeft.glb" id="28_s6xoc"]
 [ext_resource type="PackedScene" uid="uid://cmgjr7k1i8g52" path="res://assets/models/Rocks/RocksRight.glb" id="29_4bic0"]
@@ -416,14 +416,17 @@ transform = Transform3D(0.821249, 0, 0.57057, 0, 1, 0, -0.57057, 0, 0.821249, 13
 [node name="Pot1_Broken2" parent="Props" instance=ExtResource("21_y16x0")]
 transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 8.35645, 0.0113317, 4.06181)
 
-[node name="Candles_12" parent="Props" instance=ExtResource("22_2qg0e")]
+[node name="Candles_2" parent="Props" instance=ExtResource("23_6ilbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 3)
+is_lit = null
 
-[node name="Candles_22" parent="Props" instance=ExtResource("23_0reml")]
+[node name="Candles_4" parent="Props" instance=ExtResource("24_mtonl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7436, 9.53674e-07, -1.38594)
+is_lit = null
 
-[node name="Candles_23" parent="Props" instance=ExtResource("23_0reml")]
-transform = Transform3D(-0.0520048, 0, -0.998647, 0, 1, 0, 0.998647, 0, -0.0520048, 1.32961, 0, 2.20059)
+[node name="Candles_3" parent="Props" instance=ExtResource("24_mtonl")]
+transform = Transform3D(0.21315, 0, -0.97702, 0, 1, 0, 0.97702, 0, 0.21315, 1.32961, 0, 2.20059)
+is_lit = null
 
 [node name="Pot1_Broken3" parent="Props" instance=ExtResource("21_y16x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 3)
@@ -485,3 +488,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.5169
 [node name="Water" type="MeshInstance3D" parent="Dock"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.40804, -1.06505, 10.8358)
 mesh = SubResource("PlaneMesh_psu8p")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.972969, 0.154389, -0.171742, 0, 0.743679, 0.668537, 0.230936, -0.650466, 0.723576, 6.1244, 4.51206, 8.00508)

@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://binukps7h81b" path="res://assets/models/Pots/Pot2.glb" id="22_emysa"]
 [ext_resource type="PackedScene" uid="uid://ds6i1qr6v30nr" path="res://assets/models/Pots/Pot3.glb" id="23_qh5yg"]
 [ext_resource type="PackedScene" uid="uid://dgq3jaj760g3m" path="res://assets/models/Flags/Flag_Wall2.glb" id="24_a3mxb"]
-[ext_resource type="PackedScene" uid="uid://botjo6mb75sxg" path="res://props/bush.tscn" id="26_m7307"]
+[ext_resource type="PackedScene" uid="uid://botjo6mb75sxg" path="res://scenes/props/bush.tscn" id="26_m7307"]
 [ext_resource type="PackedScene" uid="uid://dthksirs4n331" path="res://assets/models/Architecture/Rail_Corner.glb" id="27_7h5ld"]
 [ext_resource type="PackedScene" uid="uid://cib8vvikhpove" path="res://assets/models/Architecture/Rail_Straight.glb" id="28_apck0"]
 [ext_resource type="PackedScene" uid="uid://cmgjr7k1i8g52" path="res://assets/models/Rocks/RocksRight.glb" id="29_ccxls"]

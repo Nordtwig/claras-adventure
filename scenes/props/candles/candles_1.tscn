@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdq3a0mhm2if3"]
+
+[ext_resource type="PackedScene" uid="uid://3oba4dk73j61" path="res://assets/models/Candles/Candles_1.glb" id="1_gbe7w"]
+[ext_resource type="Script" path="res://scripts/props/candles/candle.gd" id="2_4nan1"]
+
+[node name="Candles_1" instance=ExtResource("1_gbe7w")]
+script = ExtResource("2_4nan1")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+light_color = Color(0.839216, 0.580392, 0.211765, 1)
