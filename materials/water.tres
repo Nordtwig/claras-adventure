@@ -1,7 +1,15 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cj1ppmhqd501f"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cj1ppmhqd501f"]
 
 [ext_resource type="Shader" path="res://materials/cave_water.gdshader" id="1_6s44y"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_feoei"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_prwm3"]
+noise = SubResource("FastNoiseLite_feoei")
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_6s44y")
+shader_parameter/color = Color(0.1, 0.71, 0.82, 0.44)
+shader_parameter/height_factor = 0.1
+shader_parameter/wave_pattern = SubResource("NoiseTexture2D_prwm3")
