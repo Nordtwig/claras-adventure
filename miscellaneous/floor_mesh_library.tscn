@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr0u8vl07tt4n"]
+
+[ext_resource type="PackedScene" uid="uid://b3fgyve0r4mdk" path="res://assets/models/Floor/Floor_Standard.glb" id="1_qwm5a"]
+[ext_resource type="PackedScene" uid="uid://caiwvag4h6irp" path="res://assets/models/Architecture/Curve.glb" id="2_shwpw"]
+
+[node name="Floor_MeshLibrary" type="Node3D"]
+
+[node name="Floor_Standard" parent="." instance=ExtResource("1_qwm5a")]
+
+[node name="Curve" parent="." instance=ExtResource("2_shwpw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
