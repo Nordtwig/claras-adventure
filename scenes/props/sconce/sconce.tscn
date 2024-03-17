@@ -16,10 +16,10 @@ script = ExtResource("2_1scnk")
 surface_material_override/0 = SubResource("StandardMaterial3D_o6rbh")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426795, 0.0206916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626795, 0.0206916)
 light_color = Color(0.839216, 0.580392, 0.211765, 1)
-light_energy = 5.0
-light_indirect_energy = 2.0
+light_indirect_energy = 2.5
 shadow_enabled = true
 shadow_bias = 8.0
 shadow_normal_bias = 4.0
+omni_range = 8.0
