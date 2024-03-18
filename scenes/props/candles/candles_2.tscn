@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdr01s516wfjw"]
+[gd_scene load_steps=2 format=3 uid="uid://cdr01s516wfjw"]
 
 [ext_resource type="PackedScene" uid="uid://bwfnglb2tha53" path="res://assets/models/Candles/Candles_2.glb" id="1_2yile"]
-[ext_resource type="Script" path="res://scripts/props/candles/candle.gd" id="2_1raku"]
 
 [node name="Candles_2" instance=ExtResource("1_2yile")]
-script = ExtResource("2_1raku")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)

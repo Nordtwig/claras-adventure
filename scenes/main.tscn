@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://24b35sknpq6b"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_4v0ja"]
+[ext_resource type="PackedScene" uid="uid://b2rk4vojhra33" path="res://scenes/levels/level_1_gridmap.tscn" id="1_o1cd1"]
+[ext_resource type="PackedScene" uid="uid://bnxausgwdsjxd" path="res://scenes/ui/ui.tscn" id="2_d7fqv"]
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("parchment_scene")]
+script = ExtResource("1_4v0ja")
+parchment_scene = NodePath("Level1/Props/Parchment")
+
+[node name="UI" parent="." node_paths=PackedStringArray("main") instance=ExtResource("2_d7fqv")]
+main = NodePath("..")
+
+[node name="Level1" parent="." instance=ExtResource("1_o1cd1")]
+
+[node name="Parchment" parent="Level1/Props" index="27"]
+transform = Transform3D(0.914134, 0.405413, 1.77212e-08, 0, -4.37114e-08, 1, 0.405413, -0.914134, -3.99581e-08, 9.91073, 0.0431613, 1.72615)
+
+[editable path="Level1"]

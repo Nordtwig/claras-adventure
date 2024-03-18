@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnxausgwdsjxd"]
+[gd_scene load_steps=15 format=3 uid="uid://bnxausgwdsjxd"]
 
 [ext_resource type="Texture2D" uid="uid://5vak5rtjtv5b" path="res://assets/ui/notification.png" id="1_2wmj7"]
 [ext_resource type="Texture2D" uid="uid://d1eoqil5o7mgr" path="res://assets/ui/button_normal.png" id="1_10f1d"]
+[ext_resource type="Script" path="res://scripts/ui/ui.gd" id="1_wgvkj"]
 [ext_resource type="FontFile" uid="uid://beh8wno752jip" path="res://assets/fonts/Kefario.otf" id="2_bb5se"]
 [ext_resource type="Texture2D" uid="uid://dqvnv2baj4k13" path="res://assets/ui/button_hover.png" id="2_s37ms"]
 [ext_resource type="Texture2D" uid="uid://v3vm7vt050ay" path="res://assets/ui/button_pressed.png" id="3_sgk23"]
@@ -42,8 +43,10 @@ texture_margin_bottom = 8.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7li4d"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_wgvkj")
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(600, 400)
 anchors_preset = 8
 anchor_left = 0.5

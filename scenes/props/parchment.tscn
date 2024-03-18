@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci54rmdkaysql"]
+
+[ext_resource type="PackedScene" uid="uid://dfd483tnt7t44" path="res://assets/models/Scrolls/Parchment.glb" id="1_4lvy8"]
+[ext_resource type="Script" path="res://scripts/props/parchment.gd" id="2_n5y2j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oakql"]
+size = Vector3(0.217773, 0.259121, 0.06)
+
+[node name="Parchment" instance=ExtResource("1_4lvy8")]
+script = ExtResource("2_n5y2j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00944337, 0.0180173)
+shape = SubResource("BoxShape3D_oakql")
