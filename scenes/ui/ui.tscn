@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://bnxausgwdsjxd"]
+
+[ext_resource type="Texture2D" uid="uid://d1eoqil5o7mgr" path="res://assets/ui/button_normal.png" id="1_10f1d"]
+[ext_resource type="Texture2D" uid="uid://dqvnv2baj4k13" path="res://assets/ui/button_hover.png" id="2_s37ms"]
+[ext_resource type="Texture2D" uid="uid://v3vm7vt050ay" path="res://assets/ui/button_pressed.png" id="3_sgk23"]
+[ext_resource type="Texture2D" uid="uid://32dg17r4mj6" path="res://assets/ui/button_disabled.png" id="4_yh1le"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_drp4d"]
+texture = ExtResource("1_10f1d")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xggfu"]
+texture = ExtResource("2_s37ms")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxva3"]
+texture = ExtResource("3_sgk23")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoex3"]
+texture = ExtResource("4_yh1le")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7li4d"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Close" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_drp4d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xggfu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cxva3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_qoex3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7li4d")
+text = "Close"
