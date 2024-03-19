@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://nmk3g2231p4h"]
+[gd_scene load_steps=5 format=3 uid="uid://nmk3g2231p4h"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_rtpmt"]
 [ext_resource type="PackedScene" uid="uid://xid8qf2effea" path="res://assets/models/Clara/Clara.glb" id="2_q5gsw"]
+[ext_resource type="AudioStream" uid="uid://vkspum1mdqjf" path="res://assets/audio/Footsteps.wav" id="3_30u4t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j07xq"]
 radius = 0.4
@@ -45,5 +46,10 @@ bone_idx = 23
 
 [node name="AnimationPlayer" parent="Clara" index="1"]
 autoplay = "Idle"
+
+[node name="FootstepsSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_30u4t")
+autoplay = true
+stream_paused = true
 
 [editable path="Clara"]

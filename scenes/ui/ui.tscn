@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnxausgwdsjxd"]
+[gd_scene load_steps=16 format=3 uid="uid://bnxausgwdsjxd"]
 
 [ext_resource type="Texture2D" uid="uid://5vak5rtjtv5b" path="res://assets/ui/notification.png" id="1_2wmj7"]
 [ext_resource type="Texture2D" uid="uid://d1eoqil5o7mgr" path="res://assets/ui/button_normal.png" id="1_10f1d"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://v3vm7vt050ay" path="res://assets/ui/button_pressed.png" id="3_sgk23"]
 [ext_resource type="Texture2D" uid="uid://32dg17r4mj6" path="res://assets/ui/button_disabled.png" id="4_yh1le"]
 [ext_resource type="Script" path="res://scripts/ui/button_close.gd" id="7_rmcjt"]
+[ext_resource type="AudioStream" uid="uid://dq3hly8iirw2c" path="res://assets/audio/ButtonPress.wav" id="9_a05v2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rspd5"]
 texture = ExtResource("1_2wmj7")
@@ -86,7 +87,7 @@ Make yourself at home.
 Your uncle, Bert"
 autowrap_mode = 3
 
-[node name="Close" type="Button" parent="Panel"]
+[node name="Close" type="Button" parent="Panel" node_paths=PackedStringArray("audio_stream")]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -106,3 +107,8 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_qoex3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7li4d")
 text = "Close"
 script = ExtResource("7_rmcjt")
+audio_stream = NodePath("../../AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_a05v2")
+bus = &"SFX"
