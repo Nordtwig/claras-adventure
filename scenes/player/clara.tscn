@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://de315vc15buq1"]
+
+[ext_resource type="PackedScene" uid="uid://xid8qf2effea" path="res://assets/models/Clara/Clara.glb" id="1_sjguw"]
+
+[node name="Clara" instance=ExtResource("1_sjguw")]
+
+[node name="NurbsPath_001" parent="CharacterArmature/Skeleton3D" index="0"]
+transform = Transform3D(1, 4.83504e-12, -5.82077e-11, -1.45519e-11, 0.998026, -0.0627988, 1.16415e-10, 0.0627988, 0.998026, 1.74623e-09, -0.113878, -0.0980966)
+bone_idx = 8
+
+[node name="Torch_002" parent="CharacterArmature/Skeleton3D" index="1"]
+transform = Transform3D(0.99999, 0.00251808, 0.00384526, -0.0025103, 0.999995, -0.00209436, -0.0038507, 0.00208483, 0.99999, -0.366226, 2.0985, 0.867593)
+bone_idx = 23
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CharacterArmature/Skeleton3D/Torch_002/Torch_002" index="0"]
+transform = Transform3D(1.51515, 3.97314e-07, 2.80328e-07, 1.06411e-10, 1.51515, -2.14204e-07, 4.65661e-10, -2.32831e-10, 1.51515, -0.00174147, 0.728924, -0.0244389)
+light_color = Color(0.917647, 0.682353, 0.384314, 1)
+light_energy = 5.0
+shadow_enabled = true
+shadow_bias = 0.2
+omni_range = 6.0

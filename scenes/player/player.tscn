@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://nmk3g2231p4h"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_rtpmt"]
-[ext_resource type="PackedScene" uid="uid://xid8qf2effea" path="res://assets/models/Clara/Clara.glb" id="2_q5gsw"]
+[ext_resource type="PackedScene" uid="uid://de315vc15buq1" path="res://scenes/player/clara.tscn" id="2_y4n35"]
 [ext_resource type="AudioStream" uid="uid://vkspum1mdqjf" path="res://assets/audio/Footsteps.wav" id="3_30u4t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j07xq"]
@@ -15,41 +15,9 @@ script = ExtResource("1_rtpmt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.940925, 0)
 shape = SubResource("CapsuleShape3D_j07xq")
 
-[node name="Clara" parent="." instance=ExtResource("2_q5gsw")]
-
-[node name="Skeleton3D" parent="Clara/CharacterArmature" index="0"]
-bones/1/rotation = Quaternion(6.48338e-06, 0.702952, 0.711237, 6.50555e-06)
-bones/5/rotation = Quaternion(-0.0233535, -8.32106e-07, -5.20754e-09, 0.999727)
-bones/6/rotation = Quaternion(-0.0391465, 6.77497e-07, -2.71678e-09, 0.999233)
-bones/7/rotation = Quaternion(-5.82074e-11, -0.000275475, -8.41206e-16, 1)
-bones/10/rotation = Quaternion(0.707788, 0.520344, 0.350027, -0.325207)
-bones/11/rotation = Quaternion(-0.248002, 0.213448, -0.191478, 0.925349)
-bones/16/rotation = Quaternion(-0.0789317, -0.297914, 0.141663, 0.940717)
-bones/17/rotation = Quaternion(-0.0372921, 0.0119033, 0.303863, 0.951911)
-bones/18/rotation = Quaternion(-0.258328, 0.789867, 0.554602, 0.0423505)
-bones/19/rotation = Quaternion(-0.190863, 0.31561, 0.305979, 0.877689)
-bones/22/rotation = Quaternion(-0.740597, -0.0326893, 0.0585091, 0.668599)
-bones/24/rotation = Quaternion(-0.171058, -0.0837445, 0.432979, 0.881054)
-bones/26/rotation = Quaternion(0.956888, 0.0510866, 0.0133898, 0.285614)
-bones/27/rotation = Quaternion(0.382572, 0.00352755, 0.00728091, 0.92389)
-bones/28/rotation = Quaternion(0.993782, -0.109519, -0.0188126, 0.00698241)
-bones/29/rotation = Quaternion(0.306831, -0.00292897, -0.00754163, 0.95173)
-bones/31/rotation = Quaternion(-6.73731e-06, 0.702952, 0.711237, -6.17035e-06)
-
-[node name="NurbsPath_001" parent="Clara/CharacterArmature/Skeleton3D" index="0"]
-transform = Transform3D(1, 4.81372e-12, -5.82077e-11, -1.45519e-11, 0.998026, -0.0627988, 1.16415e-10, 0.0627988, 0.998026, 1.74623e-09, -0.113878, -0.0980966)
-bone_idx = 8
-
-[node name="Torch_002" parent="Clara/CharacterArmature/Skeleton3D" index="1"]
-transform = Transform3D(0.99999, 0.00251804, 0.00384541, -0.00251023, 0.999995, -0.00209433, -0.00385081, 0.00208472, 0.99999, -0.366226, 2.0985, 0.867593)
-bone_idx = 23
-
-[node name="AnimationPlayer" parent="Clara" index="1"]
-autoplay = "Idle"
+[node name="Clara" parent="." instance=ExtResource("2_y4n35")]
 
 [node name="FootstepsSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_30u4t")
 autoplay = true
 stream_paused = true
-
-[editable path="Clara"]
