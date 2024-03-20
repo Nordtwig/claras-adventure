@@ -11,3 +11,4 @@ func on_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		$AudioStreamPlayer.play()
 		key_collected.emit()
+		body.has_key = true

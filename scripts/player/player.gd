@@ -8,6 +8,7 @@ const SPEED: float = 3.0
 var path:= []
 var path_index:=0
 var is_moving: bool = false
+var has_key: bool = false
 
 @onready var camera: Camera3D = get_viewport().get_camera_3d()
 @onready var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state

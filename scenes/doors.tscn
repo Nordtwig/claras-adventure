@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpj2bc0eg4rag"]
+[gd_scene load_steps=6 format=3 uid="uid://dpj2bc0eg4rag"]
 
 [ext_resource type="PackedScene" uid="uid://3d0c25h7y21d" path="res://assets/models/Architecture/Doors_RoundArch.glb" id="1_ajq6h"]
 [ext_resource type="AudioStream" uid="uid://bxkoxn26sor23" path="res://assets/audio/OpenDoor.wav" id="2_2r7co"]
+[ext_resource type="Script" path="res://scripts/doors.gd" id="2_7ayc8"]
 [ext_resource type="AudioStream" uid="uid://uhjen3pw6c6o" path="res://assets/audio/LockFiddling.wav" id="3_pouwn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dyiep"]
 size = Vector3(2.41016, 1, 2.02051)
 
 [node name="Doors_RoundArch" instance=ExtResource("1_ajq6h")]
+script = ExtResource("2_7ayc8")
 
 [node name="Open" type="AudioStreamPlayer3D" parent="." index="2"]
 stream = ExtResource("2_2r7co")
