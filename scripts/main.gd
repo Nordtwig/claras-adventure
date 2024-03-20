@@ -11,9 +11,16 @@ func _ready() -> void:
 	door.door_opened.connect(on_door_opened)
 
 
+func change_level() -> void:
+	var new_level = load("res://scenes/levels/level_2.tscn").instantiate()
+
+	$Level.get_child(0).queue_free()
+	$Level.add_child(new_level)
+
+
 func on_parchment_show_note() -> void:
 	note_pressed.emit()
 
 
 func on_door_opened() -> void:
-	print("I heard the door opening from Maine")
+	change_level()
