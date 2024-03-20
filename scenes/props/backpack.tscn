@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://p224dgk75pyi"]
+
+[ext_resource type="PackedScene" uid="uid://gc6vgumrqvwe" path="res://assets/models/Backpack/Backpack.glb" id="1_8jfs5"]
+[ext_resource type="AudioStream" uid="uid://diaacejuffax1" path="res://assets/audio/CollectItem.wav" id="2_64wwm"]
+[ext_resource type="Script" path="res://scripts/props/backpack.gd" id="2_xc5mj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1qtrb"]
+size = Vector3(1.64642, 1, 1.3573)
+
+[node name="Backpack" instance=ExtResource("1_8jfs5")]
+script = ExtResource("2_xc5mj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("2_64wwm")
+bus = &"SFX"
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0083313, 0.519517, 0.641052)
+shape = SubResource("BoxShape3D_1qtrb")
