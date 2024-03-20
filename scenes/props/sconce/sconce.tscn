@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbrob7xwoxxpg"]
+[gd_scene load_steps=7 format=3 uid="uid://dbrob7xwoxxpg"]
 
 [ext_resource type="PackedScene" uid="uid://bls6b2ejopx7y" path="res://assets/models/Sconce/Sconce.glb" id="1_yfv7w"]
-[ext_resource type="Script" path="res://scripts/props/candles/candle.gd" id="2_kai5f"]
+[ext_resource type="Script" path="res://scripts/props/candles/sconce.gd" id="2_co3ia"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6rbh"]
 albedo_color = Color(1, 0.423529, 0.0823529, 1)
@@ -12,23 +12,51 @@ emission_energy_multiplier = 2.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_46ky0"]
 size = Vector3(1.40845, 1, 1.56494)
 
+[sub_resource type="Animation" id="Animation_f7as5"]
+resource_name = "Flicker"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:omni_range")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 1.3, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8.0, 7.0, 5.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lff0h"]
+_data = {
+"Flicker": SubResource("Animation_f7as5")
+}
+
 [node name="Sconce" instance=ExtResource("1_yfv7w")]
-script = ExtResource("2_kai5f")
+script = ExtResource("2_co3ia")
 
 [node name="Flame" parent="." index="1"]
+visible = false
 surface_material_override/0 = SubResource("StandardMaterial3D_o6rbh")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626795, 0.0206916)
+visible = false
 light_color = Color(0.839216, 0.580392, 0.211765, 1)
 light_indirect_energy = 2.5
 shadow_enabled = true
 shadow_bias = 8.0
 shadow_normal_bias = 4.0
-omni_range = 8.0
 
 [node name="Area3D" type="Area3D" parent="." index="3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.546547, 1.53499)
 shape = SubResource("BoxShape3D_46ky0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_lff0h")
+}

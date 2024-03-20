@@ -8,6 +8,12 @@ func _ready() -> void:
 	$OmniLight3D.visible = is_lit
 
 
+func _process(delta) -> void:
+	if is_lit:
+		await get_tree().create_timer(randf() * 2.0).timeout
+		$AnimationPlayer.play("Flicker")
+
+
 func _input(event):
 	# if event.is_action_pressed("left_click"):
 	# 	is_lit = !is_lit
