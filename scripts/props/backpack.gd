@@ -1,6 +1,6 @@
 extends Node3D
 
-signal key_collected
+var key_collected: bool = false
 
 
 func _ready() -> void:
@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 func on_body_entered(body: Node3D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and !key_collected:
 		$AudioStreamPlayer.play()
-		key_collected.emit()
-		body.has_key = true
+		key_collected = true
+		body.has_key = key_collected

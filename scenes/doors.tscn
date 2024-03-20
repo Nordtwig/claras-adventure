@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpj2bc0eg4rag"]
+[gd_scene load_steps=9 format=3 uid="uid://dpj2bc0eg4rag"]
 
 [ext_resource type="PackedScene" uid="uid://3d0c25h7y21d" path="res://assets/models/Architecture/Doors_RoundArch.glb" id="1_ajq6h"]
 [ext_resource type="AudioStream" uid="uid://bxkoxn26sor23" path="res://assets/audio/OpenDoor.wav" id="2_2r7co"]
@@ -8,8 +8,72 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_dyiep"]
 size = Vector3(2.41016, 1, 2.02051)
 
+[sub_resource type="Animation" id="Animation_4fwqb"]
+resource_name = "Open"
+length = 2.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Doors_RoundArch_L:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -2.0944, 0), Vector3(0, -2.00713, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Doors_RoundArch_R:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 2.0944, 0), Vector3(0, 2.00713, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xk62f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Doors_RoundArch_L:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Doors_RoundArch_R:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vp5yp"]
+_data = {
+"Open": SubResource("Animation_4fwqb"),
+"RESET": SubResource("Animation_xk62f")
+}
+
 [node name="Doors_RoundArch" instance=ExtResource("1_ajq6h")]
 script = ExtResource("2_7ayc8")
+
+[node name="Doors_RoundArch_R" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="Open" type="AudioStreamPlayer3D" parent="." index="2"]
 stream = ExtResource("2_2r7co")
@@ -24,3 +88,8 @@ bus = &"SFX"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0083313, 0.519517, 0.832062)
 shape = SubResource("BoxShape3D_dyiep")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_vp5yp")
+}
