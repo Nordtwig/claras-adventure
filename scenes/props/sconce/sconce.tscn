@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbrob7xwoxxpg"]
+[gd_scene load_steps=5 format=3 uid="uid://dbrob7xwoxxpg"]
 
 [ext_resource type="PackedScene" uid="uid://bls6b2ejopx7y" path="res://assets/models/Sconce/Sconce.glb" id="1_yfv7w"]
+[ext_resource type="Script" path="res://scripts/props/candles/candle.gd" id="2_kai5f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6rbh"]
 albedo_color = Color(1, 0.423529, 0.0823529, 1)
@@ -8,7 +9,11 @@ emission_enabled = true
 emission = Color(0.945098, 0.545098, 0.145098, 1)
 emission_energy_multiplier = 2.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_46ky0"]
+size = Vector3(1.40845, 1, 1.56494)
+
 [node name="Sconce" instance=ExtResource("1_yfv7w")]
+script = ExtResource("2_kai5f")
 
 [node name="Flame" parent="." index="1"]
 surface_material_override/0 = SubResource("StandardMaterial3D_o6rbh")
@@ -21,3 +26,9 @@ shadow_enabled = true
 shadow_bias = 8.0
 shadow_normal_bias = 4.0
 omni_range = 8.0
+
+[node name="Area3D" type="Area3D" parent="." index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.546547, 1.53499)
+shape = SubResource("BoxShape3D_46ky0")

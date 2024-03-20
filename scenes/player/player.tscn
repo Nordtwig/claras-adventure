@@ -20,4 +20,3 @@ shape = SubResource("CapsuleShape3D_j07xq")
 [node name="FootstepsSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_30u4t")
 autoplay = true
-stream_paused = true
